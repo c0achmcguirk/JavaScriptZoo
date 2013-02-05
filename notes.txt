@@ -1,0 +1,8 @@
+Notes:
+========================================================================
+
+- Create a Horse class with:
+     numberOfLegs
+     name
+     voice
+

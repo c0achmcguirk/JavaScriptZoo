@@ -1,6 +1,8 @@
-car = {
-  make: "Toyota"
-  model: "Camry"
-}
+class Horse
+  constructor: (@numberOfLegs, @name, @voice) ->
 
-alert car.make
+  about: ->
+    "This is a #{ @name } with #{ @numberOfLegs } legs, he says #{ @voice }"
+
+horace = new Horse(4, "horsee", "neigh!")
+alert(horace.about())
