@@ -8,16 +8,35 @@ Notes:
 - Functions
 - Arrays
 - Objects
+
+- ######
 - Existence
 - Splats
 - Comprehensions
+
+- #########
+- Reference junk  declare var $;
+- Fat Arrow
 - How do I use these?
+- Why?
+- What if it is discontinued?
 
 - resources: http://js2coffee.org/
   http://coffeescript.codeschool.com/levels/1/challenges/1
+  https://github.com/borisyankov/DefinitelyTyped
 
 - Create a Horse class with:
      numberOfLegs
      name
      voice
+
+
+# splats
+# interpolations
+# fat arrow, contexts
+# == vs. ===
+# loops  for name in names
+# interpolations
+# default parameters, pass in NULL to coffeescript, typescript
+ 
 

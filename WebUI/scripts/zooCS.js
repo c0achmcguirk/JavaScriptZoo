@@ -1,5 +1,5 @@
-﻿(function() {
-  var Horse, runMe;
+(function() {
+  var Horse, runMe, testMethod;
 
   Horse = (function() {
 
@@ -18,10 +18,21 @@
 
   })();
 
+  testMethod = function(val1, val2) {
+    if (val1 == null) {
+      val1 = "one";
+    }
+    if (val2 == null) {
+      val2 = "two";
+    }
+    return alert("" + val1 + " " + val2);
+  };
+
   runMe = function() {
     var horace;
     horace = new Horse(4, "horse", "neigh!");
-    return alert(horace.about());
+    alert(horace.about());
+    return testMethod(null, null);
   };
 
   $(document).ready(function() {
