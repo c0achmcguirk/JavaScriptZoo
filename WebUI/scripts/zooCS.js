@@ -1,5 +1,5 @@
 ﻿(function() {
-  var Horse, horace;
+  var Horse, runMe;
 
   Horse = (function() {
 
@@ -7,18 +7,27 @@
       this.numberOfLegs = numberOfLegs;
       this.name = name;
       this.voice = voice;
+      this.fullName = "the " + this.name + " is my full name";
     }
 
     Horse.prototype.about = function() {
-      return "This is a " + this.name + " with " + this.numberOfLegs + " legs, he says " + this.voice;
+      return "Hi, I'm a " + this.name + " with " + this.numberOfLegs + " legs and I say " + this.voice;
     };
 
     return Horse;
 
   })();
 
-  horace = new Horse(4, "horsee", "neigh!");
+  runMe = function() {
+    var horace;
+    horace = new Horse(4, "horse", "neigh!");
+    return alert(horace.about());
+  };
 
-  alert(horace.about());
+  $(document).ready(function() {
+    return $('#btn-run-coffee').on('click', function() {
+      return runMe();
+    });
+  });
 
 }).call(this);

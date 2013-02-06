@@ -1,6 +1,21 @@
 Notes:
 ========================================================================
 
+- Tools used
+- Assignment
+- Conditions
+- Whitespace
+- Functions
+- Arrays
+- Objects
+- Existence
+- Splats
+- Comprehensions
+- How do I use these?
+
+- resources: http://js2coffee.org/
+  http://coffeescript.codeschool.com/levels/1/challenges/1
+
 - Create a Horse class with:
      numberOfLegs
      name

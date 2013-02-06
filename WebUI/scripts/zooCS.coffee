@@ -1,8 +1,21 @@
 class Horse
   constructor: (@numberOfLegs, @name, @voice) ->
+    @fullName = "the #{ @name } is my full name"
 
   about: ->
-    "This is a #{ @name } with #{ @numberOfLegs } legs, he says #{ @voice }"
+    "Hi, I'm a #{ @name } with #{ @numberOfLegs } legs and I say #{ @voice }"
 
-horace = new Horse(4, "horsee", "neigh!")
-alert(horace.about())
+runMe = ->
+  horace = new Horse(4, "horse", "neigh!")
+  alert(horace.about())
+
+$(document).ready ->
+  $('#btn-run-coffee').on 'click', ->
+    runMe()
+
+# splats
+# interpolations
+# fat arrow, contexts
+# == vs. ===
+# loops  for name in names
+# interpolations
