@@ -2,10 +2,14 @@
   var runMe;
 
   runMe = function() {
-    var animal, numberOfLegs;
+    var animal, numberOfLegs, rhino;
     animal = "Rhino";
     numberOfLegs = 4;
-    return alert("The " + animal + " has " + numberOfLegs + " legs.");
+    rhino = {
+      type: animal,
+      numLegs: numberOfLegs
+    };
+    return alert("The " + rhino.type + " has " + rhino.numLegs + " legs.");
   };
 
   $(document).ready(function() {
