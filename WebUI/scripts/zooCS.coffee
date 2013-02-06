@@ -5,7 +5,10 @@ runMe = ->
     type: animal
     numLegs: numberOfLegs
 
-  if rhino.numLegs == 4 then alert("Has 4") else alert("Not 4")
+  if rhino.numLegs == 4 
+    alert("Has 4") 
+  else 
+    alert("Not 4")
 
   alert "Not correct" unless rhino.numLegs == 4
 
