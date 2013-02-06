@@ -9,7 +9,14 @@
       type: animal,
       numLegs: numberOfLegs
     };
-    return alert("The " + rhino.type + " has " + rhino.numLegs + " legs.");
+    if (rhino.numLegs === 4) {
+      alert("Has 4");
+    } else {
+      alert("Not 4");
+    }
+    if (rhino.numLegs !== 4) {
+      return alert("Not correct");
+    }
   };
 
   $(document).ready(function() {
