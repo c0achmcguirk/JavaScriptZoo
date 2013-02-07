@@ -1,30 +1,29 @@
 /// <reference path="./jquery.d.ts"/>
 interface IAnimal {
-  numLegs: number;
+  food: string;
+  name: string;
   type: string;
-  other: any;
+}
+
+var feed = function (animal: IAnimal) {
+  alert("Just fed " + animal.food + " to " + animal.name + " the " + animal.type + ".");
 }
 
 var runMe = function () {
-  var numLegs: number = 4;
-  var type: string = "monkey"
-
-  //var animal: IAnimal;
-  var animal: IAnimal = {
-    numLegs: numLegs,
-    type: type,
-    other: function () { return "other"; }
+  var animal1: IAnimal = {
+    name: "Ziggy",
+    type: "Zebra",
+    food: "leaves"
   };
 
-  animal.numLegs = numLegs + 2;
-  animal.type = "monkey";
-  animal.other = function () { return "other again"; };
+  var animal2: IAnimal = {
+    name: "Leo",
+    type: "Lion",
+    food: "steak"
+  };
 
-  if (animal.type == "monkey") {
-    alert("The " + animal.type + " has " + animal.numLegs + " legs. " + animal.other());
-  } else {
-    alert("This is no monkey, what are you trying to pull?");
-  }
+  feed(animal1);
+  feed(animal2);
 }
 
 $(document).ready(function () {

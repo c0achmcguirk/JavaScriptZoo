@@ -1,19 +1,19 @@
-runMe = ->
-  animal =
-    type: "monkey"
-    numLegs: 4
-    other: -> "other"
+feed = (animal) ->
+  alert "Just fed #{ animal.food } to #{ animal.name } the #{ animal.type }."
 
-  # animal = {}
-  animal.type = 5
-  animal.numLegs = "4"
-  animal.numLegs = null
-  animal.other = -> "other2"
+runMe = ->
+  animal1 =
+    name: "Ziggy"
+    type: "Zebra"
+    food: "leaves"
   
-  if animal.type == "monkey" 
-    alert "The #{animal.type} has #{animal.numLegs} legs. #{ animal.other() }"
-  else
-    alert "This is no monkey, what are you trying to pull?"
+  animal2 = 
+    name: "Leo"
+    type: "Lion"
+    food: "steak" 
+
+  feed(animal1)
+  feed(animal2)
 
 $(document).ready ->
   $('#btn-run-coffee').on 'click', ->

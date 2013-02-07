@@ -1,23 +1,19 @@
+var feed = function (animal) {
+    alert("Just fed " + animal.food + " to " + animal.name + " the " + animal.type + ".");
+};
 var runMe = function () {
-    var numLegs = 4;
-    var type = "monkey";
-    var animal = {
-        numLegs: numLegs,
-        type: type,
-        other: function () {
-            return "other";
-        }
+    var animal1 = {
+        name: "Ziggy",
+        type: "Zebra",
+        food: "leaves"
     };
-    animal.numLegs = numLegs + 2;
-    animal.type = "monkey";
-    animal.other = function () {
-        return "other again";
+    var animal2 = {
+        name: "Leo",
+        type: "Lion",
+        food: "steak"
     };
-    if(animal.type == "monkey") {
-        alert("The " + animal.type + " has " + animal.numLegs + " legs. " + animal.other());
-    } else {
-        alert("This is no monkey, what are you trying to pull?");
-    }
+    feed(animal1);
+    feed(animal2);
 };
 $(document).ready(function () {
     $('#btn-run-type').on('click', function () {
