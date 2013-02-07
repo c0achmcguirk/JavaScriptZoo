@@ -1,20 +1,11 @@
 /// <reference path="./jquery.d.ts"/>
 var runMe = function () {
-  var animal = "Rhino";
-  var numberOfLegs = 4;
-  var rhino = {
-    type: animal,
-    numLegs: numberOfLegs
-  }
-  if (rhino.numLegs === 4) {
-    alert("Has 4");
-  } else {
-    alert("Not 4");
+  var monkey = {
+numLegs: 4,
+       type: "monkey"
   }
 
-  if (rhino.numLegs != 4) {
-    alert("Not correct");
-  }
+  alert("The " + monkey.type + " has " + monkey.numLegs + " legs");
 }
 
 $(document).ready(function () {

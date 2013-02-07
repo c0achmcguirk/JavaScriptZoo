@@ -5,6 +5,7 @@ Notes:
 - Assignment
 - Conditions
 - Whitespace
+- Strongly Typed Typescript
 - Functions
 - Arrays
 - Objects

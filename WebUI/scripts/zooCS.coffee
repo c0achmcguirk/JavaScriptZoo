@@ -1,16 +1,9 @@
 runMe = ->
-  animal = "Rhino"
-  numberOfLegs = 4 
-  rhino =
-    type: animal
-    numLegs: numberOfLegs
+  monkey =
+      type: "monkey"
+numLegs: 4
 
-  if rhino.numLegs == 4 
-    alert("Has 4") 
-  else 
-    alert("Not 4")
-
-  alert "Not correct" unless rhino.numLegs == 4
+  alert("The " + monkey.type + " has " + monkey.numLegs + " legs.")
 
 $(document).ready ->
   $('#btn-run-coffee').on 'click', ->
