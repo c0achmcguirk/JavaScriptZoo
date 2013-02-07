@@ -1,29 +1,19 @@
 /// <reference path="./jquery.d.ts"/>
-interface IAnimal {
-  food: string;
-  name: string;
-  type: string;
-}
-
-var feed = function (animal: IAnimal) {
-  alert("Just fed " + animal.food + " to " + animal.name + " the " + animal.type + ".");
+var clean = function (type: string = "ANIMAL",
+  location: string = "LOCATION",
+  usingSoap: bool = true) {
+  var msg = "I am washing the " + type + ", in the " + location;
+  if (usingSoap)
+    msg += ", using soap.";
+  else
+    msg += ", without soap.";
+  alert(msg);
 }
 
 var runMe = function () {
-  var animal1: IAnimal = {
-    name: "Ziggy",
-    type: "Zebra",
-    food: "leaves"
-  };
-
-  var animal2: IAnimal = {
-    name: "Leo",
-    type: "Lion",
-    food: "steak"
-  };
-
-  feed(animal1);
-  feed(animal2);
+  clean("baboon", "pen", false);
+  clean("elephant", null, true);
+  clean();
 }
 
 $(document).ready(function () {

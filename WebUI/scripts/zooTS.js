@@ -1,19 +1,19 @@
-var feed = function (animal) {
-    alert("Just fed " + animal.food + " to " + animal.name + " the " + animal.type + ".");
+var clean = function (type, location, usingSoap) {
+    if (typeof type === "undefined") { type = "ANIMAL"; }
+    if (typeof location === "undefined") { location = "LOCATION"; }
+    if (typeof usingSoap === "undefined") { usingSoap = true; }
+    var msg = "I am washing the " + type + ", in the " + location;
+    if(usingSoap) {
+        msg += ", using soap.";
+    } else {
+        msg += ", without soap.";
+    }
+    alert(msg);
 };
 var runMe = function () {
-    var animal1 = {
-        name: "Ziggy",
-        type: "Zebra",
-        food: "leaves"
-    };
-    var animal2 = {
-        name: "Leo",
-        type: "Lion",
-        food: "steak"
-    };
-    feed(animal1);
-    feed(animal2);
+    clean("baboon", "pen", false);
+    clean("elephant", null, true);
+    clean();
 };
 $(document).ready(function () {
     $('#btn-run-type').on('click', function () {

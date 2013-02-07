@@ -1,19 +1,17 @@
-feed = (animal) ->
-  alert "Just fed #{ animal.food } to #{ animal.name } the #{ animal.type }."
+clean = (type = "ANIMAL", location = "CAGE", usingSoap = true) ->
+  msg = "I am washing the #{ type }, in the #{ location }"
+
+  if usingSoap
+    msg += ", using soap."
+  else
+    msg += ", without soap."
+
+  alert msg
 
 runMe = ->
-  animal1 =
-    name: "Ziggy"
-    type: "Zebra"
-    food: "leaves"
-  
-  animal2 = 
-    name: "Leo"
-    type: "Lion"
-    food: "steak" 
-
-  feed(animal1)
-  feed(animal2)
+  clean("baboon", "pen", false)
+  clean("elephant", null, true)
+  clean()
 
 $(document).ready ->
   $('#btn-run-coffee').on 'click', ->
