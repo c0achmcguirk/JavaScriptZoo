@@ -1,11 +1,15 @@
 /// <reference path="./jquery.d.ts"/>
 var runMe = function () {
-  var monkey = {
+  var animal = {
 numLegs: 4,
-       type: "monkey"
+        type: "monkey"
   }
 
-  alert("The " + monkey.type + " has " + monkey.numLegs + " legs");
+  if (animal.type == "monkey") {
+  alert("The " + animal.type + " has " + animal.numLegs + " legs");
+  } else {
+alert("This is no monkey, what are you trying to pull?");
+  }
 }
 
 $(document).ready(function () {

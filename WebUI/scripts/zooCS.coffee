@@ -1,9 +1,12 @@
 runMe = ->
-  monkey =
+  animal =
       type: "monkey"
 numLegs: 4
-
-  alert("The " + monkey.type + " has " + monkey.numLegs + " legs.")
+  
+    if animal.type == "monkey" 
+  alert("The " + animal.type + " has " + animal.numLegs + " legs.")
+  else
+    alert("This is no monkey, what are you trying to pull?")
 
 $(document).ready ->
   $('#btn-run-coffee').on 'click', ->

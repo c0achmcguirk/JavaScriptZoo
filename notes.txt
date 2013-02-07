@@ -7,6 +7,7 @@ Notes:
 - Whitespace
 - Strongly Typed Typescript
 - Functions
+- Default parameters
 - Arrays
 - Objects
 
