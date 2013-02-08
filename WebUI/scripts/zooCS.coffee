@@ -7,6 +7,7 @@ clean = (type = "ANIMAL", location = "CAGE", usingSoap = true) ->
     msg += ", without soap."
 
   alert msg
+  alert "Done!"
 
 runMe = ->
   clean("baboon", "pen", false)

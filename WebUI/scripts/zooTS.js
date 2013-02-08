@@ -1,3 +1,4 @@
+/// <reference path="./jquery.d.ts"/>
 var clean = function (type, location, usingSoap) {
     if (typeof type === "undefined") { type = "ANIMAL"; }
     if (typeof location === "undefined") { location = "LOCATION"; }
@@ -9,6 +10,7 @@ var clean = function (type, location, usingSoap) {
         msg += ", without soap.";
     }
     alert(msg);
+    alert("another message");
 };
 var runMe = function () {
     clean("baboon", "pen", false);

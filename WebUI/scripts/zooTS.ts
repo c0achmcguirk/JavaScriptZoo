@@ -7,7 +7,8 @@ var clean = function (type: string = "ANIMAL",
     msg += ", using soap.";
   else
     msg += ", without soap.";
-  alert(msg);
+    alert(msg);
+    alert("another message");
 }
 
 var runMe = function () {
