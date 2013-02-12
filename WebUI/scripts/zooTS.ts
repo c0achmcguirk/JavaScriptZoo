@@ -1,30 +1,40 @@
 /// <reference path="./jquery.d.ts"/>
-var runMe = function () {
-  var animals: { name: string; type: string; } [];
+class Animal {
+  constructor(public name: string) { }
 
-  var animals = [
-    {
-      name: "bill",
-      type: "horse"
-    },
-    {
-      name: "prasad",
-      type: "eagle"
-    },
-    {
-      name: "jill",
-      type: "antelope"
-    }
-  ];
-
-  describe(animals);
+  move(meters: number) {
+    alert(this.name + " moved " + meters + " meters.");
+  }
 }
 
-var describe = function (animals) {
-  for (var i = 0; i < animals.length; i++) {
-    alert("This is " + animals[i].name + ", which " +
-      "is a " + animals[i].type);
+class Horse extends Animal {
+  constructor(name: string) {
+    super(name);
   }
+
+  move() {
+    alert("Galloping...");
+    super.move(45);
+  }
+}
+
+class Snake extends Animal {
+  constructor(name: string) {
+    super(name);
+  }
+
+  move() {
+    alert("Slithering...");
+    super.move(5);
+  }
+}
+
+var runMe = function () {
+  var harry = new Horse("Harry the Horse");
+  harry.move();
+
+  var sammy = new Snake("Sammy the Snake");
+  sammy.move();
 }
 
 $(document).ready(function () {

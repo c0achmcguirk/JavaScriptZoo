@@ -9,7 +9,7 @@ Notes:
 - Functions
 - Default parameters
 - Arrays
-- Objects
+- Classes
 
 - ##### TypeScript features
 - Intellisense
