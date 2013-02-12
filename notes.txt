@@ -21,6 +21,9 @@ Notes:
 - Existence
 - Splats
 - Comprehensions
+- loops  for name in names
+- hoisting
+- Fat Arrows, Context
 
 - #########
 - Reference junk  declare var $;
@@ -41,10 +44,4 @@ Notes:
 
 # splats
 # interpolations
-# fat arrow, contexts
-# == vs. ===
-# loops  for name in names
-# interpolations
-# default parameters, pass in NULL to coffeescript, typescript
- 
 
