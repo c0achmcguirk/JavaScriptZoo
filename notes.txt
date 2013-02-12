@@ -11,6 +11,12 @@ Notes:
 - Arrays
 - Objects
 
+- ##### TypeScript features
+- Intellisense
+- Getters/Setters
+- 
+
+
 - ######
 - Existence
 - Splats

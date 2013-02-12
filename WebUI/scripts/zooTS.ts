@@ -1,14 +1,6 @@
 /// <reference path="./jquery.d.ts"/>
-class Animal {
-  name: string;
-  type: string;
-}
-
 var runMe = function () {
-  var animals: Animal[];
-  animals = [
-    new Animal() { name: "bill", type: "horse" }
-  ];
+  var animals: { name: string; type: string; } [];
 
   var animals = [
     {

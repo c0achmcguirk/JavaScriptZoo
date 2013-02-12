@@ -1,4 +1,5 @@
 var runMe = function () {
+    var animals;
     var animals = [
         {
             name: "bill",
