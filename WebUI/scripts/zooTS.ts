@@ -1,40 +1,20 @@
 /// <reference path="./jquery.d.ts"/>
-class Animal {
-  constructor(public name: string) { }
-
-  move(meters: number) {
-    alert(this.name + " moved " + meters + " meters.");
-  }
-}
-
-class Horse extends Animal {
-  constructor(name: string) {
-    super(name);
-  }
-
-  move() {
-    alert("Galloping...");
-    super.move(45);
-  }
-}
-
-class Snake extends Animal {
-  constructor(name: string) {
-    super(name);
-  }
-
-  move() {
-    alert("Slithering...");
-    super.move(5);
-  }
-}
-
 var runMe = function () {
-  var harry = new Horse("Harry the Horse");
-  harry.move();
+  complexMethod(null, null, null, null, "arg5", null, null);
 
-  var sammy = new Snake("Sammy the Snake");
-  sammy.move();
+  var aminals = 4;
+  if (animals > 0) {
+    alert("You have some animals");
+  } else {
+    alert("No animals for you!");
+  }
+}
+
+var complexMethod = function (arg1: number, arg2: number,
+  arg3: number, arg4: number,
+  arg5: string, arg6: number,
+  arg7: bool) {
+  alert("You called the complex method, arg5 = " + arg5);
 }
 
 $(document).ready(function () {

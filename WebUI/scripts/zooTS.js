@@ -1,44 +1,14 @@
-var __extends = this.__extends || function (d, b) {
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
-var Animal = (function () {
-    function Animal(name) {
-        this.name = name;
-    }
-    Animal.prototype.move = function (meters) {
-        alert(this.name + " moved " + meters + " meters.");
-    };
-    return Animal;
-})();
-var Horse = (function (_super) {
-    __extends(Horse, _super);
-    function Horse(name) {
-        _super.call(this, name);
-    }
-    Horse.prototype.move = function () {
-        alert("Galloping...");
-        _super.prototype.move.call(this, 45);
-    };
-    return Horse;
-})(Animal);
-var Snake = (function (_super) {
-    __extends(Snake, _super);
-    function Snake(name) {
-        _super.call(this, name);
-    }
-    Snake.prototype.move = function () {
-        alert("Slithering...");
-        _super.prototype.move.call(this, 5);
-    };
-    return Snake;
-})(Animal);
 var runMe = function () {
-    var harry = new Horse("Harry the Horse");
-    harry.move();
-    var sammy = new Snake("Sammy the Snake");
-    sammy.move();
+    complexMethod(null, null, null, null, "arg5", null, null);
+    var aminals = 4;
+    if(animals > 0) {
+        alert("You have some animals");
+    } else {
+        alert("No animals for you!");
+    }
+};
+var complexMethod = function (arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+    alert("You called the complex method, arg5 = " + arg5);
 };
 $(document).ready(function () {
     $('#btn-run-type').on('click', function () {
