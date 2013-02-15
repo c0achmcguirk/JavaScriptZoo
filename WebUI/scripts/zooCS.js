@@ -1,19 +1,61 @@
 ﻿(function() {
-  var complexMethod, runMe;
+  var Duck, Horse, Snake, getDescription, getDescription2, runMe;
+
+  Horse = (function() {
+
+    function Horse(name, numLegs, age, hasHorseshoes) {
+      this.name = name;
+      this.numLegs = numLegs;
+      this.age = age;
+      this.hasHorseshoes = hasHorseshoes;
+    }
+
+    return Horse;
+
+  })();
+
+  Duck = (function() {
+
+    function Duck(name, numLegs, age) {
+      this.name = name;
+      this.numLegs = numLegs;
+      this.age = age;
+    }
+
+    return Duck;
+
+  })();
+
+  Snake = (function() {
+
+    function Snake(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    return Snake;
+
+  })();
 
   runMe = function() {
-    var aminals;
-    complexMethod(null, null, null, null, null, "arg5", null, null);
-    aminals = 4;
-    if (animals > 0) {
-      return alert("You have some animals");
-    } else {
-      return alert("No animals for you!");
-    }
+    var donald, horace, sammy;
+    horace = new Horse("Horace", 4, 8, true);
+    donald = new Duck("Donald", 2, 1);
+    sammy = new Snake("Sammy", 2);
+    getDescription(horace);
+    getDescription(donald);
+    getDescription(sammy);
+    getDescription2(horace);
+    getDescription2(donald);
+    return getDescription2(sammy);
   };
 
-  complexMethod = function(arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
-    return alert("You called the complex method, arg5 = " + arg5);
+  getDescription = function(animal) {
+    return alert("" + animal.name + " is " + animal.age + " years old.");
+  };
+
+  getDescription2 = function(animal) {
+    return alert(("" + animal.name + " is " + animal.age + " years old and ") + ("has " + animal.numLegs + " legs. Horseshoes? " + animal.hasHorseshoes + "."));
   };
 
   $(document).ready(function() {

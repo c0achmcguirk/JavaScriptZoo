@@ -1,14 +1,34 @@
-runMe = ->
-  complexMethod(null, null, null, null, null, "arg5", null, null)
+class Horse
+  constructor: (@name, @numLegs, @age, @hasHorseshoes) ->
 
-  aminals = 4
-  if animals > 0
-    alert "You have some animals"
-  else
-    alert "No animals for you!"
-  
-complexMethod = (arg1, arg2, arg3, arg4, arg5, arg6, arg7) ->
-  alert "You called the complex method, arg5 = #{ arg5 }"
+class Duck
+  constructor: (@name, @numLegs, @age) ->
+
+class Snake
+  constructor: (@name, @age) ->
+
+runMe = ->
+  horace = new Horse("Horace", 4, 8, true)
+  donald = new Duck("Donald", 2, 1)
+  sammy = new Snake("Sammy", 2)
+
+  # will work
+  getDescription(horace)
+  getDescription(donald)
+  getDescription(sammy)
+
+  getDescription2(horace)
+  # will not work
+  getDescription2(donald)
+  getDescription2(sammy)
+
+
+getDescription = (animal) ->
+  alert "#{ animal.name } is #{ animal.age } years old."
+
+getDescription2 = (animal) ->
+  alert "#{ animal.name } is #{ animal.age } years old and " +
+    "has #{ animal.numLegs } legs. Horseshoes? #{ animal.hasHorseshoes }."
 
 $(document).ready ->
   $('#btn-run-coffee').on 'click', ->

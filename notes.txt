@@ -13,9 +13,7 @@ Notes:
 
 - ##### TypeScript features
 - Intellisense
-- Getters/Setters
-- 
-
+- Interfaces
 
 - ######
 - Existence
