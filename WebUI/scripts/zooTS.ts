@@ -1,56 +1,38 @@
 /// <reference path="./jquery.d.ts"/>
-interface IAnimalable {
+
+interface Gorilla {
   name: string;
-  age: number;
-}
-
-interface ILeggable {
-  numLegs: number;
-}
-
-interface IHorsable extends IAnimalable, ILeggable {
-  hasHorseShoes: bool;
-}
-
-class Horse implements IHorsable {
-  constructor(public name: string,
-    public age: number,
-    public numLegs: number,
-    public hasHorseShoes: bool)
-    { }
-}
-
-class Duck implements IAnimalable, ILeggable {
-  constructor(public name: string, public age: number, public numLegs: number)
-  { }
-}
-
-class Snake implements IAnimalable {
-  constructor(public name: string, public age: number)
-  { }
 }
 
 var runMe = function () {
-  var horace = new Horse("Horace", 4, 8, true);
-  var donald = new Duck("Donald", 2, 1);
-  var sammy = new Snake("Sammy", 2);
+  var gorilla1 : Gorilla = {
+    name: "Gwen"
+  };
 
-  getDescription(horace);
-  getDescription(donald);
-  getDescription(sammy);
+  var gorilla2 : Gorilla = {
+    name: "Gus"
+  };
 
-  getDescription2(horace);
-  // getDescription2(donald);
-  // getDescription2(sammy);
+  var gorilla3 : Gorilla = {
+    name: "Gary"
+  };
+
+  var gorilla4 : Gorilla = {
+    name: "Gillian"
+  };
+
+  feeding(gorilla1, gorilla2, gorilla3, gorilla4);
 }
 
-function getDescription(animal: IAnimalable) {
-  alert(animal.name + " is " + animal.age + " years old.");
-}
-
-function getDescription2(animal: IHorsable) {
-  alert(animal.name + " is " + animal.age + " years old and " +
-    "has " + animal.numLegs + " legs. Horseshoes? " + animal.hasHorseShoes + ".");
+var feeding = function (gorilla1: Gorilla,
+  gorilla2: Gorilla,
+  ...others: Gorilla[])
+{
+  alert(gorilla1.name + " gets most of the food.");
+  alert(gorilla2.name + " gets the rest of the food.");
+  for (var i = 0; i < others.length; i++) {
+    alert(others[i].name + " didn't get any food.");
+  }
 }
 
 $(document).ready(function () {

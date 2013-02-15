@@ -1,61 +1,35 @@
 ﻿(function() {
-  var Duck, Horse, Snake, getDescription, getDescription2, runMe;
-
-  Horse = (function() {
-
-    function Horse(name, numLegs, age, hasHorseshoes) {
-      this.name = name;
-      this.numLegs = numLegs;
-      this.age = age;
-      this.hasHorseshoes = hasHorseshoes;
-    }
-
-    return Horse;
-
-  })();
-
-  Duck = (function() {
-
-    function Duck(name, numLegs, age) {
-      this.name = name;
-      this.numLegs = numLegs;
-      this.age = age;
-    }
-
-    return Duck;
-
-  })();
-
-  Snake = (function() {
-
-    function Snake(name, age) {
-      this.name = name;
-      this.age = age;
-    }
-
-    return Snake;
-
-  })();
+  var feeding, runMe,
+    __slice = [].slice;
 
   runMe = function() {
-    var donald, horace, sammy;
-    horace = new Horse("Horace", 4, 8, true);
-    donald = new Duck("Donald", 2, 1);
-    sammy = new Snake("Sammy", 2);
-    getDescription(horace);
-    getDescription(donald);
-    getDescription(sammy);
-    getDescription2(horace);
-    getDescription2(donald);
-    return getDescription2(sammy);
+    var gorilla1, gorilla2, gorilla3, gorilla4;
+    gorilla1 = {
+      name: "Gwen"
+    };
+    gorilla2 = {
+      name: "Gus"
+    };
+    gorilla3 = {
+      name: "Gary"
+    };
+    gorilla4 = {
+      name: "Gillian"
+    };
+    return feeding(gorilla1, gorilla2, gorilla3, gorilla4);
   };
 
-  getDescription = function(animal) {
-    return alert("" + animal.name + " is " + animal.age + " years old.");
-  };
-
-  getDescription2 = function(animal) {
-    return alert(("" + animal.name + " is " + animal.age + " years old and ") + ("has " + animal.numLegs + " legs. Horseshoes? " + animal.hasHorseshoes + "."));
+  feeding = function() {
+    var firstGorilla, g, others, secondGorilla, _i, _len, _results;
+    firstGorilla = arguments[0], secondGorilla = arguments[1], others = 3 <= arguments.length ? __slice.call(arguments, 2) : [];
+    alert(firstGorilla.name + " gets most of the food.");
+    alert(secondGorilla.name + " gets the rest of the food.");
+    _results = [];
+    for (_i = 0, _len = others.length; _i < _len; _i++) {
+      g = others[_i];
+      _results.push(alert(g.name + " didn't get anything."));
+    }
+    return _results;
   };
 
   $(document).ready(function() {
