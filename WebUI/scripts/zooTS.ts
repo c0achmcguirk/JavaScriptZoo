@@ -1,38 +1,27 @@
 /// <reference path="./jquery.d.ts"/>
-
-interface Gorilla {
-  name: string;
-}
-
 var runMe = function () {
-  var gorilla1 : Gorilla = {
-    name: "Gwen"
-  };
-
-  var gorilla2 : Gorilla = {
-    name: "Gus"
-  };
-
-  var gorilla3 : Gorilla = {
-    name: "Gary"
-  };
-
-  var gorilla4 : Gorilla = {
-    name: "Gillian"
-  };
-
-  feeding(gorilla1, gorilla2, gorilla3, gorilla4);
-}
-
-var feeding = function (gorilla1: Gorilla,
-  gorilla2: Gorilla,
-  ...others: Gorilla[])
-{
-  alert(gorilla1.name + " gets most of the food.");
-  alert(gorilla2.name + " gets the rest of the food.");
-  for (var i = 0; i < others.length; i++) {
-    alert(others[i].name + " didn't get any food.");
+  // penguin is not defined yet.
+  if (penguin !== null) {
+    alert(("This is " + penguin.name + ", ") +
+      (penguin.canFly ? "he can fly" : "he can't fly"));
+  } else {
+    alert("There is no penguin");
   }
+
+  // define that lil' guy.
+  var penguin: any = {
+    name: "Pongo",
+    canFly: false
+  }
+
+  // now we can describe him.
+  if (penguin !== null) {
+    alert(("This is " + penguin.name + ", ") +
+      (penguin.canFly ? "he can fly" : "he can't fly"));
+  } else {
+    alert("There is no penguin");
+  }
+
 }
 
 $(document).ready(function () {

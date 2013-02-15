@@ -1,23 +1,22 @@
 runMe = ->
-  gorilla1 =
-    name: "Gwen"
+  # not defined yet
+  if penguin?
+    alert("This is #{ penguin.name }, " + 
+      if penguin.canFly then "he can fly" else "he can't fly")
+  else
+    alert("There is no penguin.")
+  
+  # defined
+  penguin =
+    name: "Pongo"
+    canFly: false
 
-  gorilla2 = 
-    name: "Gus"
-
-  gorilla3 =
-    name: "Gary"
-
-  gorilla4 =
-    name: "Gillian"
-
-  feeding(gorilla1, gorilla2, gorilla3, gorilla4)
-
-feeding = (firstGorilla, secondGorilla, others...) ->
-  alert(firstGorilla.name + " gets most of the food.")
-  alert(secondGorilla.name + " gets the rest of the food.")
-  for g in others
-    alert(g.name + " didn't get anything.")
+  # now we can describe the penguin
+  if penguin?
+    alert("This is #{ penguin.name }, " + 
+      if penguin.canFly then "he can fly" else "he can't fly")
+  else
+    alert("There is no penguin.")
 
 $(document).ready ->
   $('#btn-run-coffee').on 'click', ->
