@@ -13,6 +13,12 @@ var runMe = function () {
     } else {
         alert("There is no penguin");
     }
+    var scaryThing = {
+        looksLike: "UNSURE"
+    };
+    if((scaryThing.looksLike) == null) {
+        scaryThing.looksLike = "sasquatch";
+    }
 };
 $(document).ready(function () {
     $('#btn-run-type').on('click', function () {
