@@ -10,14 +10,14 @@ Notes:
 - Default parameters
 - Arrays
 - Classes
+- Splats
 
 - ##### TypeScript features
 - Intellisense
 - Interfaces
 
-- ######
+- ###### Coffeescript features
 - Existence
-- Splats
 - Comprehensions
 - loops  for name in names
 - hoisting
