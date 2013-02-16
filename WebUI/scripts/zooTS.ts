@@ -1,69 +1,51 @@
 /// <reference path="./jquery.d.ts"/>
 var runMe = function () {
-  // penguin is not defined yet.
-  if (penguin !== null) {
-    alert(("This is " + penguin.name + ", ") +
-      (penguin.canFly ? "he can fly" : "he can't fly"));
-  } else {
-    alert("There is no penguin");
+  var animals = ["giraffe", "lion", "horse", "sloth"];
+
+  var animalText = ""
+  // put them all in there
+  for (var i = 0, len = animals.length; i < len; i++) {
+    var animal = animals[i];
+    animalText += "Putting " + animal + " into its cage.\r";
   }
 
-  // define that lil' guy.
-  var penguin: any = {
-    name: "Pongo",
-    canFly: false
+  alert("Caged ALL:\r\r" + animalText);
+
+  animalText = "";
+  // wait, we won't allow lions in there!
+  for (var i = 0, len = animals.length; i < len; i++) {
+    animal = animals[i];
+    if (animal !== "lion") {
+      animalText += "Putting " + animal + " into its cage.\r";
+    }
   }
 
-  // now we can describe him.
-  if (penguin !== null) {
-    alert(("This is " + penguin.name + ", ") +
-      (penguin.canFly ? "he can fly" : "he can't fly"));
-  } else {
-    alert("There is no penguin");
-  }
-
-  // This doesn't work because TypeScript won't allow
-  // us to use an undefined yeti variable.
-  /*
-  var beast = typeof yeti !== "undefined" && yeti !== null ? yeti : "bear";
-  alert("You just saw a " +beast);
-  */
-
-  var scaryThing = {
-    looksLike: "UNSURE"
-  };
-
-
-  // this doesn't work because TypeScript won't allow
-  // us to use an undefined member of scaryThing: coveredWith
-  /*
-  alert(("Ooh!, that looks like a " + scaryThing.looksLike + ", ") +
-    ("it's covered with " + scaryThing.coveredWith));
-  if ((scaryThing.coveredWith) == null) {
-    scaryThing.coveredWith = "hair";
-  }
-  */
-
-  // TypeScript allows this...because looksLike is defined above.
-  if ((scaryThing.looksLike) == null) {
-    scaryThing.looksLike = "sasquatch";
-  }
-
-  // This won't work because TypeScript doesn't like the undefined
-  // coveredWith
-  /*
-  alert("On closer inspection, it looks like a " +
-    scaryThing.looksLike + ", " +
-    "it's covered with " + scaryThing.coveredWith);
-  scaryThing.coveredWith = "nylon fake hair";
-  scaryThing.looksLike = "guy in a gorilla suit";
-  return alert("I've verified that it's a " + scaryThing.looksLike + ", "
-     + "it's covered with " + scaryThing.coveredWith;
-  */
+  alert("Caged some:\r\r" + animalText);
 };
+
+var runMe2 = function () {
+  // countup
+  var age = ""
+  for (var x = 1; x < 35; x++) {
+    age += x + "..";
+  }
+    
+  alert("How the elephant has aged: " + age);
+
+  // weird countdown
+  var numberOfPeacocks = ""
+  for (var i = 97; i >= 14; i -= 3) {
+    numberOfPeacocks += i + "..";
+  }
+
+  alert("Number of peacocks:\r\r" + numberOfPeacocks);
+}
 
 $(document).ready(function () {
   $('#btn-run-type').on('click', function () {
     runMe();
+  });
+  $('#btn-run-type2').on('click', function () {
+    runMe2();
   });
 });
