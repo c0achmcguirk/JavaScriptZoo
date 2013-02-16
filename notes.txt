@@ -19,7 +19,6 @@ Notes:
 - ###### Coffeescript features
 - Existence
 - Comprehensions
-- loops  for name in names
 - hoisting
 - Fat Arrows, Context
 
