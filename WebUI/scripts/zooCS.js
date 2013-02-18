@@ -1,5 +1,5 @@
 ﻿(function() {
-  var runMe, runMe2;
+  var runMe;
 
   runMe = function() {
     /*
@@ -15,14 +15,9 @@
     return alert(a);
   };
 
-  runMe2 = function() {};
-
   $(document).ready(function() {
-    $('#btn-run-coffee').on('click', function() {
+    return $('#btn-run-coffee').on('click', function() {
       return runMe();
-    });
-    return $('#btn-run-coffee2').on('click', function() {
-      return runMe2();
     });
   });
 

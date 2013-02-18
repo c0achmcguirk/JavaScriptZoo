@@ -9,11 +9,6 @@ runMe = ->
   a = 2
   alert a
 
-runMe2 = ->
-  
-
 $(document).ready ->
   $('#btn-run-coffee').on 'click', ->
     runMe()
-  $('#btn-run-coffee2').on 'click', ->
-    runMe2()
