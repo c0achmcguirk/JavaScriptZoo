@@ -6,6 +6,7 @@ var runMe = function () {
     type: animal,
     numLegs: numberOfLegs
   }
+  rhino.type = "Rhino";
   alert("The " + rhino.type + " has " + rhino.numLegs + " legs.");
 }
 
