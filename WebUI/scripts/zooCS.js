@@ -2,20 +2,15 @@
   var runMe;
 
   runMe = function() {
-    var animal, numberOfLegs, rhino;
-    animal = "Rhino";
-    numberOfLegs = 4;
-    rhino = {
-      type: animal,
-      numLegs: numberOfLegs
+    var animal;
+    animal = {
+      type: "monkey",
+      numLegs: 4
     };
-    if (rhino.numLegs === 4) {
-      alert("Has 4");
+    if (animal.type === "monkey") {
+      return alert("The " + animal.type + " has " + animal.numLegs + " legs.");
     } else {
-      alert("Not 4");
-    }
-    if (rhino.numLegs !== 4) {
-      return alert("Not correct");
+      return alert("This is no monkey, what are you trying to pull?");
     }
   };
 
