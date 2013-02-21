@@ -9,6 +9,4 @@ runMe = ->
   a = 2
   alert a
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)

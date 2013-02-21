@@ -5,8 +5,4 @@ var runMe = function () {
     a = 2;
     alert(a + "");
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);
