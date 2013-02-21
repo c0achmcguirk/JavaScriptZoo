@@ -31,8 +31,4 @@ runMe2 = ->
   
   alert "Number of peacocks:\r\r#{ numberOfPeacocks }"
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
-  $('#btn-run-coffee2').on 'click', ->
-    runMe2()
+@wireUpEvents(runMe, runMe2)

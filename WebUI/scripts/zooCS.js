@@ -34,13 +34,6 @@
     return alert("Number of peacocks:\r\r" + numberOfPeacocks);
   };
 
-  $(document).ready(function() {
-    $('#btn-run-coffee').on('click', function() {
-      return runMe();
-    });
-    return $('#btn-run-coffee2').on('click', function() {
-      return runMe2();
-    });
-  });
+  this.wireUpEvents(runMe, runMe2);
 
 }).call(this);

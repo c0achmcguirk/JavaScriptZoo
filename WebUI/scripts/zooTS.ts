@@ -40,12 +40,4 @@ var runMe2 = function () {
 
   alert("Number of peacocks:\r\r" + numberOfPeacocks);
 }
-
-$(document).ready(function () {
-  $('#btn-run-type').on('click', function () {
-    runMe();
-  });
-  $('#btn-run-type2').on('click', function () {
-    runMe2();
-  });
-});
+this.wireUpEvents(runMe, runMe2);
