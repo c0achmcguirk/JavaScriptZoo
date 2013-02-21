@@ -17,8 +17,4 @@ var complexMethod = function (arg1: number, arg2: number,
   alert("You called the complex method, arg5 = " + arg5);
 }
 
-$(document).ready(function () {
-  $('#btn-run-type').on('click', function () {
-    runMe();
-  });
-});
+this.wireUpEvents(runMe);

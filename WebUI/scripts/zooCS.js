@@ -16,10 +16,6 @@
     return alert("You called the complex method, arg5 = " + arg5);
   };
 
-  $(document).ready(function() {
-    return $('#btn-run-coffee').on('click', function() {
-      return runMe();
-    });
-  });
+  this.wireUpEvents(runMe);
 
 }).call(this);

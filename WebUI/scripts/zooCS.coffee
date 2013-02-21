@@ -10,6 +10,4 @@ runMe = ->
 complexMethod = (arg1, arg2, arg3, arg4, arg5, arg6, arg7) ->
   alert "You called the complex method, arg5 = #{ arg5 }"
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)
