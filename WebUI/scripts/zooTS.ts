@@ -20,8 +20,4 @@ var runMe = function () {
 
 };
 
-$(document).ready(function () {
-  $('#btn-run-type').on('click', function () {
-    runMe();
-  });
-});
+this.wireUpEvents(runMe);
