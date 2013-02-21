@@ -15,8 +15,4 @@ var runMe = function () {
     clean("elephant", null, true);
     clean();
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);

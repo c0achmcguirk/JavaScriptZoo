@@ -13,6 +13,4 @@ runMe = ->
   clean("elephant", null, true)
   clean()
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)
