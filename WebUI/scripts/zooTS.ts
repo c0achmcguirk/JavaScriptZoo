@@ -1,7 +1,7 @@
 /// <reference path="./jquery.d.ts"/>
 var runMe = function () {
   // penguin is not defined yet.
-  if (penguin !== null) {
+  if (penguin !== null && typeof penguin !== "undefined") {
     alert(("This is " + penguin.name + ", ") +
       (penguin.canFly ? "he can fly" : "he can't fly"));
   } else {
@@ -21,7 +21,9 @@ var runMe = function () {
   } else {
     alert("There is no penguin");
   }
+}
 
+var runMe2 = function() {
   // This doesn't work because TypeScript won't allow
   // us to use an undefined yeti variable.
   /*
@@ -62,8 +64,4 @@ var runMe = function () {
   */
 };
 
-$(document).ready(function () {
-  $('#btn-run-type').on('click', function () {
-    runMe();
-  });
-});
+this.wireUpEvents(runMe, runMe2);

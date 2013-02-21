@@ -23,6 +23,7 @@ runMe = ->
   alert "You just saw a #{ beast }"
 
   # assign it if it is null
+runMe2 = ->
   scaryThing = 
     looksLike : "UNSURE"
 
@@ -41,7 +42,4 @@ runMe = ->
   alert "I've verified that it's a #{ scaryThing.looksLike }, " +
     "it's covered with #{ scaryThing.coveredWith }"
 
-
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe, runMe2)

@@ -1,5 +1,5 @@
 var runMe = function () {
-    if(penguin !== null) {
+    if(penguin !== null && typeof penguin !== "undefined") {
         alert(("This is " + penguin.name + ", ") + (penguin.canFly ? "he can fly" : "he can't fly"));
     } else {
         alert("There is no penguin");
@@ -13,6 +13,8 @@ var runMe = function () {
     } else {
         alert("There is no penguin");
     }
+};
+var runMe2 = function () {
     var scaryThing = {
         looksLike: "UNSURE"
     };
@@ -20,8 +22,4 @@ var runMe = function () {
         scaryThing.looksLike = "sasquatch";
     }
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe, runMe2);

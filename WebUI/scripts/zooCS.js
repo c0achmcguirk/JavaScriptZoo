@@ -1,8 +1,8 @@
 ﻿(function() {
-  var runMe;
+  var runMe, runMe2;
 
   runMe = function() {
-    var beast, penguin, scaryThing, _ref, _ref1;
+    var beast, penguin;
     if (typeof penguin !== "undefined" && penguin !== null) {
       alert(("This is " + penguin.name + ", ") + (penguin.canFly ? "he can fly" : "he can't fly"));
     } else {
@@ -18,7 +18,11 @@
       alert("There is no penguin.");
     }
     beast = typeof yeti !== "undefined" && yeti !== null ? yeti : "bear";
-    alert("You just saw a " + beast);
+    return alert("You just saw a " + beast);
+  };
+
+  runMe2 = function() {
+    var scaryThing, _ref, _ref1;
     scaryThing = {
       looksLike: "UNSURE"
     };
@@ -35,10 +39,6 @@
     return alert(("I've verified that it's a " + scaryThing.looksLike + ", ") + ("it's covered with " + scaryThing.coveredWith));
   };
 
-  $(document).ready(function() {
-    return $('#btn-run-coffee').on('click', function() {
-      return runMe();
-    });
-  });
+  this.wireUpEvents(runMe, runMe2);
 
 }).call(this);
