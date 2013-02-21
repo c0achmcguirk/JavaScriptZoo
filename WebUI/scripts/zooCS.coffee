@@ -17,6 +17,4 @@ describe = (animals) ->
     alert "This is #{ animal.name }, which is a #{ animal.type }"
   return
   
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)

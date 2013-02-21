@@ -21,8 +21,4 @@ var describe = function (animals) {
         alert("This is " + animals[i].name + ", which " + "is a " + animals[i].type);
     }
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);
