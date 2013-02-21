@@ -24,8 +24,4 @@ var feeding = function (gorilla1, gorilla2) {
         alert(others[i].name + " didn't get any food.");
     }
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);

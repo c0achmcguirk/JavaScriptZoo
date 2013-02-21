@@ -19,6 +19,4 @@ feeding = (firstGorilla, secondGorilla, others...) ->
   for g in others
     alert(g.name + " didn't get anything.")
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)

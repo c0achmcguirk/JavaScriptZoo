@@ -1,5 +1,4 @@
 /// <reference path="./jquery.d.ts"/>
-
 interface Gorilla {
   name: string;
 }
@@ -9,7 +8,7 @@ var runMe = function () {
     name: "Gwen"
   };
 
-  var gorilla2 : Gorilla = {
+  var gorilla2: Gorilla = {
     name: "Gus"
   };
 
@@ -35,8 +34,4 @@ var feeding = function (gorilla1: Gorilla,
   }
 }
 
-$(document).ready(function () {
-  $('#btn-run-type').on('click', function () {
-    runMe();
-  });
-});
+this.wireUpEvents(runMe);
