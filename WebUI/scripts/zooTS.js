@@ -14,8 +14,4 @@ var runMe = function () {
         alert("Not correct");
     }
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);

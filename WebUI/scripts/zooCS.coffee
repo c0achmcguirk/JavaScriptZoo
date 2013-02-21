@@ -12,6 +12,4 @@ runMe = ->
 
   alert "Not correct" unless rhino.numLegs == 4
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)
