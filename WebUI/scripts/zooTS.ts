@@ -37,8 +37,4 @@ var runMe = function () {
   sammy.move();
 }
 
-$(document).ready(function () {
-  $('#btn-run-type').on('click', function () {
-    runMe();
-  });
-});
+this.wireUpEvents(runMe);

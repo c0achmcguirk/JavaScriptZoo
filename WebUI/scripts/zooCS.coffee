@@ -21,6 +21,4 @@ runMe = ->
   sammy = new Snake("Sammy the Snake")
   sammy.move()
   
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)

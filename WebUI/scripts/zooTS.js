@@ -40,8 +40,4 @@ var runMe = function () {
     var sammy = new Snake("Sammy the Snake");
     sammy.move();
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);
