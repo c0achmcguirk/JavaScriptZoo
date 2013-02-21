@@ -10,8 +10,4 @@ var runMe = function () {
   alert("The " + rhino.type + " has " + rhino.numLegs + " legs.");
 }
 
-$(document).ready(function () {
-  $('#btn-run-type').on('click', function () {
-    runMe();
-  });
-});
+this.wireUpEvents(runMe);

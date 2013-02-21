@@ -6,6 +6,4 @@ runMe = ->
     numLegs: numberOfLegs
   alert("The " + rhino.type + " has " + rhino.numLegs + " legs.")
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)

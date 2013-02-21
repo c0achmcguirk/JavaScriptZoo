@@ -12,10 +12,6 @@
     return alert("The " + rhino.type + " has " + rhino.numLegs + " legs.");
   };
 
-  $(document).ready(function() {
-    return $('#btn-run-coffee').on('click', function() {
-      return runMe();
-    });
-  });
+  this.wireUpEvents(runMe);
 
 }).call(this);
