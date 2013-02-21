@@ -15,6 +15,4 @@ runMe = ->
   feed(animal1)
   feed(animal2)
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)

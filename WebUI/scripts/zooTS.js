@@ -15,8 +15,4 @@ var runMe = function () {
     feed(animal1);
     feed(animal2);
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);
