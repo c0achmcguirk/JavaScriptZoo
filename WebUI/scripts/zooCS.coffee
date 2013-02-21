@@ -30,6 +30,4 @@ getDescription2 = (animal) ->
   alert "#{ animal.name } is #{ animal.age } years old and " +
     "has #{ animal.numLegs } legs. Horseshoes? #{ animal.hasHorseshoes }."
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)

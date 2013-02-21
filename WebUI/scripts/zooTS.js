@@ -37,8 +37,4 @@ function getDescription(animal) {
 function getDescription2(animal) {
     alert(animal.name + " is " + animal.age + " years old and " + "has " + animal.numLegs + " legs. Horseshoes? " + animal.hasHorseShoes + ".");
 }
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);
