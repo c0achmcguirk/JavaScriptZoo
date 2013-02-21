@@ -19,8 +19,4 @@ var runMe = function () {
         alert("This is no monkey, what are you trying to pull?");
     }
 };
-$(document).ready(function () {
-    $('#btn-run-type').on('click', function () {
-        runMe();
-    });
-});
+this.wireUpEvents(runMe);

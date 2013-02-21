@@ -15,6 +15,4 @@ runMe = ->
   else
     alert "This is no monkey, what are you trying to pull?"
 
-$(document).ready ->
-  $('#btn-run-coffee').on 'click', ->
-    runMe()
+@wireUpEvents(runMe)
