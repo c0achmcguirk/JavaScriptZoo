@@ -11,7 +11,7 @@ runMe = ->
   # wait, we won't allow lions in there!
   animalText = ""
   for animal in animals when animal isnt "lion"
-  # for animal in animals when animal.length < 5 
+  #for animal in animals when animal.length < 5 
     animalText += "Putting #{ animal } into the cage.\r"
 
   alert "Caged Some:\r\r#{ animalText }"
