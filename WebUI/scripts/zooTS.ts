@@ -1,4 +1,3 @@
-/// <reference path="./jquery.d.ts"/>
 interface IAnimal {
   numLegs: number;
   type: string;
