@@ -1,4 +1,3 @@
-/// <reference path="./jquery.d.ts"/>
 var runMe = function () {
   var animal = "Rhino";
   var numberOfLegs = 4;
