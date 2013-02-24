@@ -18,5 +18,6 @@ feeding = (firstGorilla, secondGorilla, others...) ->
   alert(secondGorilla.name + " gets the rest of the food.")
   for g in others
     alert(g.name + " didn't get anything.")
+  return
 
 @wireUpEvents(runMe)
