@@ -1,4 +1,3 @@
-/// <reference path="./jquery.d.ts"/>
 var runMe = function () {
   // penguin is not defined yet.
   if (penguin !== null && typeof penguin !== "undefined") {
