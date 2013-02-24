@@ -1,5 +1,5 @@
 var clean = function (type: string = "ANIMAL",
-  location: string = "LOCATION",
+  location: string = "CAGE",
   usingSoap: bool = true) {
   var msg = "I am washing the " + type + ", in the " + location;
   if (usingSoap)

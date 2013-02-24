@@ -1,6 +1,6 @@
 var clean = function (type, location, usingSoap) {
     if (typeof type === "undefined") { type = "ANIMAL"; }
-    if (typeof location === "undefined") { location = "LOCATION"; }
+    if (typeof location === "undefined") { location = "CAGE"; }
     if (typeof usingSoap === "undefined") { usingSoap = true; }
     var msg = "I am washing the " + type + ", in the " + location;
     if(usingSoap) {
