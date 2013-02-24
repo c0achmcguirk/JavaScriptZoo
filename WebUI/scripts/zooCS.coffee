@@ -1,7 +1,7 @@
 runMe = ->
   animal =
       type: "monkey"
-numLegs: 4
+ numLegs: 4
   
     if animal.type == "monkey" 
   alert("The " + animal.type + " has " + animal.numLegs + " legs.")
