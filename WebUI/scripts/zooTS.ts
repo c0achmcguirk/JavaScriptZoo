@@ -1,4 +1,3 @@
-/// <reference path="./jquery.d.ts"/>
 var clean = function (type: string = "ANIMAL",
   location: string = "LOCATION",
   usingSoap: bool = true) {
