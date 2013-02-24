@@ -1,4 +1,3 @@
-/// <reference path="./jquery.d.ts"/>
 this.name = "Bill";
 
 var runMe = function () {
