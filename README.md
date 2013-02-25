@@ -18,7 +18,7 @@ Links
 
 Branches
 --------
-The following branches exist in this project. Here are brief descriptiosn of each.
+The following branches exist in this project. Here are brief descriptions of each.
 
 - **01-Assignment** Shows how you assign values to variables in both languages.
 - **02-Conditions** If/Else blocks
