@@ -9,7 +9,7 @@ This project was created to compare [CoffeeScript](http://www.coffeescript.org) 
 
 Links
 -----
-- [Presi Presentation](http://prezi.com/zkhsz49ownaw/coffeescript-vs-typescript/?kw=view-zkhsz49ownaw&rc=ref-15215083).
+- [Prezi Presentation](http://prezi.com/zkhsz49ownaw/coffeescript-vs-typescript/?kw=view-zkhsz49ownaw&rc=ref-15215083).
 - [ASP.NET and Web Tools 2012.2 Update](http://www.asp.net/vnext). Needed for CoffeeScript support in your IDE and also has some new bangin' features for web tooling in your IDE.
 - [Install TypeScript](http://typescript.codeplex.com/). Follow the instructions here to get TypeScript installed into VS 2012.
 - [Solve TypeScript Install Issue](http://bit.ly/QGb6q5). If TypeScript doesn't work in Visual Studio yet, follow the instructions here.
