@@ -15,4 +15,6 @@ runMe = ->
 
   giraffe.eat()
 
-@wireUpEvents(runMe)
+$(document).ready ->
+  $('#btn-run-coffee').on 'click', ->
+    runMe()

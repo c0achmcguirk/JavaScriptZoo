@@ -1,3 +1,4 @@
+/// <reference path="./jquery.d.ts"/>
 this.name = "Bill";
 
 var runMe = function () {
@@ -19,4 +20,8 @@ var runMe = function () {
 
 };
 
-this.wireUpEvents(runMe);
+$(document).ready(function () {
+  $('#btn-run-type').on('click', function () {
+    runMe();
+  });
+});

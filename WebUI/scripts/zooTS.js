@@ -13,4 +13,8 @@ var runMe = function () {
     };
     giraffe.eat();
 };
-this.wireUpEvents(runMe);
+$(document).ready(function () {
+    $('#btn-run-type').on('click', function () {
+        runMe();
+    });
+});

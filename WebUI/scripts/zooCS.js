@@ -19,6 +19,10 @@
     return giraffe.eat();
   };
 
-  this.wireUpEvents(runMe);
+  $(document).ready(function() {
+    return $('#btn-run-coffee').on('click', function() {
+      return runMe();
+    });
+  });
 
 }).call(this);
