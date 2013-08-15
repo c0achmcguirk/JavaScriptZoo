@@ -60,4 +60,4 @@ website
 *.nupkg
 /packages/*
 !/packages/repositories.config
-
+/Media/*.key
