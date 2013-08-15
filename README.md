@@ -9,12 +9,26 @@ This project was created to compare [CoffeeScript](http://www.coffeescript.org) 
 
 Links
 -----
-- [Prezi Presentation](http://prezi.com/zkhsz49ownaw/coffeescript-vs-typescript/?kw=view-zkhsz49ownaw&rc=ref-15215083).
-- [ASP.NET and Web Tools 2012.2 Update](http://www.asp.net/vnext). Needed for CoffeeScript support in your IDE and also has some new bangin' features for web tooling in your IDE.
-- [Install TypeScript](http://typescript.codeplex.com/). Follow the instructions here to get TypeScript installed into VS 2012.
-- [Solve TypeScript Install Issue](http://bit.ly/QGb6q5). If TypeScript doesn't work in Visual Studio yet, follow the instructions here.
+- [Prezi Presentation](http://prezi.com/zkhsz49ownaw/coffeescript-vs-typescript/?kw=view-zkhsz49ownaw&rc=ref-15215083). I gave this presentation in February 2013. It's goes along with this source code.
+- [ASP.NET and Web Tools 2012.2 Update](http://www.asp.net/downloads). Needed for CoffeeScript support in your IDE and also has some new bangin' features for web tooling in your IDE.
+- [Install TypeScript](http://typescript.codeplex.com/). Follow the instructions here to get TypeScript installed into VS 2012. **Warning** As of August 2013 There are some major problems with the 0.9.X releases of TypeScript (See [the comments here](http://typescript.codeplex.com/releases/view/102929)). I highly recommend using the 0.8.3.1 release (March 29), which is sort of hidden [here](http://download.microsoft.com/download/2/F/F/2FFA1FBA-97CA-4FFB-8ED7-A4AE06398948/TypeScriptSetup.0.8.3.1.msi).
+- [Solve TypeScript Install Issue](http://bit.ly/QGb6q5). If TypeScript doesn't work in Visual Studio yet, follow the instructions found at the link to the left.
 - [VS 2012 Web Essentials Extension](http://visualstudiogallery.msdn.microsoft.com/6ed4c78f-a23e-49ad-b5fd-369af0c2107f) This extension gives you the split screen effect and can compile and minimize your TypeScript/CoffeeScript.
 - [CodeSchool CoffeeScript Test](http://coffeescript.codeschool.com/). A Sip of CoffeeScript. Take the free test (module 1) to see how well you can do.
+
+Troubleshooting
+---------------
+If:
+
+- **TypeScript isn't highlighted in Visual Studio**<br>First make sure you've installed TypeScript from the link above. If that doesn't fix it, follow the instructions in [this StackOverflow post](http://bit.ly/QGb6q5) for forcing TypeScript to install.
+- **You have a split screen when editing TypeScript or CoffeeScript files**<br>
+Maybe you like the split screen, or perhaps you'd like to shut it off? You can do this in Visual Studio Options, under Web Essentials.
+- **Mindscape Web Workbench is fighting with Web Essentials**<br>
+I recommend *disabling* Mindscape Web Workbench to use Web Essentials. There are a few features that Mindscape provides that I prefer to Web Essentials, but the two extensions don't play well together. It works better if you only run Web Essentials.
+- **Your tsc.exe process hangs and/or uses gigs of RAM**<br>
+You most likely installed one of the 0.9.X versions of TypeScript. Roll back to version 0.8.3.1, which is a hard to find download. I'll be nice and give you a direct link: [TypeScript 0.8.3.1](http://download.microsoft.com/download/2/F/F/2FFA1FBA-97CA-4FFB-8ED7-A4AE06398948/TypeScriptSetup.0.8.3.1.msi).
+- **CoffeeScript is not highlighted in Visual Studio**<br>
+Make sure you install the latest tooling update for Visual Studio [ASP.NET and Web Tools 2012.2 Update](http://www.asp.net/downloads). Just run the Web Installer and choose what you need to install. You *don't need to install the Azure stuff* if you don't want to.
 
 Branches
 --------
