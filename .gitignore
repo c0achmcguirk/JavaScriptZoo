@@ -24,6 +24,8 @@
 *.lib
 *.sbr
 *.sdf
+*dummy.min.js*
+*zoo*min.js*
 ipch/
 obj/
 [Bb]in
