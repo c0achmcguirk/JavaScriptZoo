@@ -1,13 +1,17 @@
 var runMe = function () {
-    complexMethod(null, null, null, null, "arg5", null, null);
-    var aminals = 4;
-    if(animals > 0) {
-        alert("You have some animals");
+    var animal = "Rhino";
+    var numberOfLegs = 4;
+    var rhino = {
+        type: animal,
+        numLegs: numberOfLegs
+    };
+    if(rhino.numLegs === 4) {
+        alert("Has 4");
     } else {
-        alert("No animals for you!");
+        alert("Not 4");
     }
-};
-var complexMethod = function (arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
-    alert("You called the complex method, arg5 = " + arg5);
+    if(rhino.numLegs != 4) {
+        alert("Not correct");
+    }
 };
 this.wireUpEvents(runMe);
