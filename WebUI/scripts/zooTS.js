@@ -8,3 +8,4 @@ var runMe = function () {
     alert("The " + rhino.type + " has " + rhino.numLegs + " legs.");
 };
 this.wireUpEvents(runMe);
+//@ sourceMappingURL=zooTS.js.map
