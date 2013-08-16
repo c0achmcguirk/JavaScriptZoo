@@ -26,6 +26,8 @@
 *.sdf
 *dummy.min.js*
 *zoo*min.js*
+*dummy*js.map
+*zoo*js.map
 ipch/
 obj/
 [Bb]in
@@ -55,6 +57,7 @@ _dotCover*/
 *.ReSharper
 *.dotCover
 /package/*
+/node_modules*/
 *.snk
 *.zip
 website
