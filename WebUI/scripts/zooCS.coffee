@@ -1,12 +1,12 @@
 runMe = ->
   animals = [
-      name: "bill"
+      name: "harry"
       type: "horse"
     , 
-      name: "prasad"
+      name: "edgar"
       type: "eagle"
     ,
-      name: "jill"
+      name: "alice"
       type: "antelope"
   ]
 
