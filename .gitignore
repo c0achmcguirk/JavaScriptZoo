@@ -65,3 +65,4 @@ website
 /packages/*
 !/packages/repositories.config
 /Media/*.key
+/node_modules*/
