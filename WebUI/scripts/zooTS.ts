@@ -8,7 +8,7 @@ var runMe = function () {
     eat: function () {
       alert(this.name + " the " + this.type + " (with " + this.numSpots +
         " spots) is eating.");
-      setTimeout(function () {
+      setTimeout(() => {
         alert(this.name + " the " + this.type + " (with " + this.numSpots +
           " spots) is still eating, 2 seconds later.");
       }, 2000);
