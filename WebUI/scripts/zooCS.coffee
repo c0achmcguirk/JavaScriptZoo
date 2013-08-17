@@ -1,6 +1,6 @@
 runMe = ->
   animal = "Rhino"
-  numberOfLegs = 4
+  numberOfLegs = 4 
   rhino =
     type: animal
     numLegs: numberOfLegs

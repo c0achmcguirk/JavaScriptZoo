@@ -1,3 +1,68 @@
-*.swp
-*.suo
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
 
+#Visual Studio files
+*.[Oo]bj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+*dummy.min.js*
+*zoo*min.js*
+*dummy*js.map
+*zoo*js.map
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+*.docstates
+
+#Tooling
+_ReSharper*/
+_dotCover*/
+*.resharper
+[Tt]est[Rr]esult*
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+# Other
+*.swp
+*.swp
+*.ReSharper
+*.dotCover
+/package/*
+*.snk
+*.zip
+website
+/doc/apidoc
+*.nupkg
+/packages/*
+!/packages/repositories.config
+/Media/*.key
+/node_modules*/
