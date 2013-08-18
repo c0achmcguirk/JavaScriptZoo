@@ -66,3 +66,4 @@ website
 /packages/*
 !/packages/repositories.config
 /Media/*.key
+/Media/*.psd
