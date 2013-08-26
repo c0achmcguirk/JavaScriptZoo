@@ -26,7 +26,9 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 *****************************************************************/
-(function () {
+(function (context) {
+    this = context;
+
     var _typeface_js = {
         faces: {},
         loadFace: function (typefaceData) {
@@ -302,10 +304,11 @@ OTHER DEALINGS IN THE SOFTWARE.
 
             var elementsLength = elements.length;
             for (var i = 0; i < elements.length; i++) {
-                if (elements[i].className.match(/(^|\s)typeface-js(\s|$)/) || elements[i].tagName.match(/^(H1|H2|H3|H4|H5|H6)$/)) {
-                    this.replaceText(elements[i]);
+                var element = elements[i];
+                if (element.className.match(/(^|\s)typeface-js(\s|$)/) || element.tagName.match(/^(H1|H2|H3|H4|H5|H6)$/)) {
+                    this.replaceText(element);
                     if (typeof callback == 'function') {
-                        callback(elements[i]);
+                        callback(element);
                     }
                 }
             }
@@ -658,7 +661,7 @@ OTHER DEALINGS IN THE SOFTWARE.
             // flag this function so we don't do the same thing twice
             arguments.callee.done = true;
 
-            if (window._typefaceTimer)
+            if (this._typefaceTimer)
                 clearInterval(_typefaceTimer);
 
             this.renderDocument(function (e) {
@@ -729,7 +732,7 @@ OTHER DEALINGS IN THE SOFTWARE.
         }
     }
 
-    var backend = window.CanvasRenderingContext2D || document.createElement('canvas').getContext ? 'canvas' : !!(window.attachEvent && !window.opera) ? 'vml' : null;
+    var backend = CanvasRenderingContext2D || document.createElement('canvas').getContext ? 'canvas' : !!(window.attachEvent && !this.opera) ? 'vml' : null;
 
     if (backend == 'vml') {
         document.namespaces.add("v", "urn:schemas-microsoft-com:vml", "#default#VML");
@@ -739,7 +742,7 @@ OTHER DEALINGS IN THE SOFTWARE.
     }
 
     _typeface_js.setVectorBackend(backend);
-    window._typeface_js = _typeface_js;
+    this._typeface_js = _typeface_js;
 
     if (/WebKit/i.test(navigator.userAgent)) {
         var _typefaceTimer = setInterval(function () {
@@ -756,8 +759,8 @@ OTHER DEALINGS IN THE SOFTWARE.
     }
 
     try  {
-        console.log('initializing typeface.js');
+        console.log('initializing typeface.js from typescript');
     } catch (e) {
     }
     ;
-})();
+})(window);

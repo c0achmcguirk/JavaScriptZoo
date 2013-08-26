@@ -27,9 +27,33 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 *****************************************************************/
 
-(function() {
+interface typefaceSpan extends HTMLSpanElement {
+  targetWidth : number;
+}
+
+interface HTMLShape extends HTMLElement {
+  coordsize: string;
+  coordorigin: string;
+  style: StyleProperties;
+  fillColor: string;
+  stroked: boolean;
+  path: any;
+}
+
+interface StyleProperties extends MSStyleCSSProperties {
+  flip : any;
+}
+
+interface Function extends Function {
+  done : boolean;
+}
+
+(function(context) {
+
+this = context;
 
 var _typeface_js = {
+  
 
 	faces: {},
 
@@ -307,7 +331,7 @@ var _typeface_js = {
 				containerSpan.appendChild(vector.element);
 
 				if (!this.disableSelection) {
-					var selectableSpan = document.createElement('span');
+					var selectableSpan = <typefaceSpan>document.createElement('span');
 					selectableSpan.className = 'typeface-js-selected-text';
 
 					var wordNode = document.createTextNode(word);
@@ -340,10 +364,11 @@ var _typeface_js = {
 		
 		var elementsLength = elements.length;
 		for (var i = 0; i < elements.length; i++) {
-			if (elements[i].className.match(/(^|\s)typeface-js(\s|$)/) || elements[i].tagName.match(/^(H1|H2|H3|H4|H5|H6)$/)) {
-				this.replaceText(elements[i]);
+      var element = <HTMLElement>elements[i];
+			if (element.className.match(/(^|\s)typeface-js(\s|$)/) || element.tagName.match(/^(H1|H2|H3|H4|H5|H6)$/)) {
+				this.replaceText(element);
 				if (typeof callback == 'function') {
-					callback(elements[i]);
+					callback(element);
 				}
 			}
 		}
@@ -400,7 +425,7 @@ var _typeface_js = {
 				}
 
 				var childNodesLength = renderedText.childNodes.length
-				for (var i; i < childNodesLength; i++) {
+				for (var i : number; i < childNodesLength; i++) {
 					
 					// do our best to line up selectable text with rendered text
 
@@ -561,7 +586,7 @@ var _typeface_js = {
 
 			_initializeSurface: function(face, style, text) {
 
-				var shape = document.createElement('v:shape');
+				var shape = <HTMLShape>document.createElement('v:shape');
 
 				var extents = this.getTextExtents(face, style, text);
 				
@@ -660,11 +685,11 @@ var _typeface_js = {
 								break;
 
 							case 'b':
-								var cp1x = Math.round(outline[i++]) + offsetX;
-								var cp1y = outline[i++];
+								var cp1x : number = Math.round(outline[i++]) + offsetX;
+								var cp1y : number = outline[i++];
 
-								var cp2x = Math.round(outline[i++]) + offsetX;
-								var cp2y = outline[i++];
+								var cp2x : number = Math.round(outline[i++]) + offsetX;
+								var cp2y : number = outline[i++];
 
 								vmlSegments.push('c ', cp1x, ',', cp1y, ',', cp2x, ',', cp2y, ',', x, ',', y);
 								break;
@@ -732,7 +757,6 @@ var _typeface_js = {
 	},
 	
 	initialize: function() {
-
 		// quit if this function has already been called
 		if (arguments.callee.done) return; 
 		
@@ -740,7 +764,7 @@ var _typeface_js = {
 		arguments.callee.done = true;
 
 		// kill the timer
-		if (window._typefaceTimer) clearInterval(_typefaceTimer);
+		if (this._typefaceTimer) clearInterval(_typefaceTimer);
 
 		this.renderDocument( function(e) { e.style.visibility = 'visible' } );
 
@@ -787,7 +811,7 @@ if (document.createStyleSheet) {
 		document.getElementsByTagName('head')[0].appendChild(styleSheet);
 	})() }
 
-	var styleSheet = document.styleSheets[0];
+	var styleSheet = <CSSStyleSheet>document.styleSheets[0];
 	document.styleSheets[0].insertRule(typefaceSelectors.join(',') + ' { visibility: hidden; }', styleSheet.cssRules.length); 
 
 	document.styleSheets[0].insertRule(
@@ -829,7 +853,7 @@ if (document.createStyleSheet) {
 
 }
 
-var backend =  window.CanvasRenderingContext2D || document.createElement('canvas').getContext ? 'canvas' : !!(window.attachEvent && !window.opera) ? 'vml' : null;
+var backend =  CanvasRenderingContext2D || document.createElement('canvas').getContext ? 'canvas' : !!(window.attachEvent && !this.opera) ? 'vml' : null;
 
 if (backend == 'vml') {
 
@@ -840,7 +864,7 @@ if (backend == 'vml') {
 }
 
 _typeface_js.setVectorBackend(backend);
-window._typeface_js = _typeface_js;
+this._typeface_js = _typeface_js;
 	
 if (/WebKit/i.test(navigator.userAgent)) {
 
@@ -868,7 +892,6 @@ script.onreadystatechange = function() {
 
 /*@end @*/
 
-try { console.log('initializing typeface.js') } catch(e) {};
+try { console.log('initializing typeface.js from typescript') } catch(e) {};
 
-})();
-
+})(window);
